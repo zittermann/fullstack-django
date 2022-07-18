@@ -6,5 +6,6 @@ from thread.serializers.thread import (
 
 # Create your views here.
 class ThreadViewset(viewsets.ModelViewSet):
-    queryset = Thread.objects.all().order_by("code")
+
     serializer_class = ThreadSerializer
+    queryset = Thread.objects.all().order_by("-code")
